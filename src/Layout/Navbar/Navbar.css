@@ -1,0 +1,24 @@
+.navbar-logo{
+    width: 130px;
+    height: 130px;
+    margin-top: -30px !important;
+    margin-bottom: -30px !important;
+}
+
+.navbar{
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.nav-link{
+    color: #895a25;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 0.75em;
+}
+#nav-link:hover,#nav-link:active{
+    color: #f39339;
+}
+.active{
+    color: #f39339;
+}
