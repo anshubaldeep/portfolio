@@ -1,0 +1,29 @@
+.jumbotron{
+    background-color: transparent;
+    text-align: left;
+}
+
+.name{
+    color: #f39339;
+}
+
+.img{
+    width: 291px;
+    height: 300px;
+}
+
+.text {
+    font-weight: 100;
+    font-size: 28px;
+    color: #fafafa;
+  }
+  .dud {
+    color: #757575;
+  }
+
+  @media only screen and (max-width: 768px){
+      .img{
+          width: 241px;
+          height: 255px;
+      }
+  }

@@ -1,12 +1,15 @@
 import React from 'react';
-import classes from './Layout.module.css';
+//import classes from './Layout.module.css';
 import Navbar from './Navbar/Navbar';
 
 
 
-const NavbarComponent=()=>{
+const NavbarComponent=(props)=>{
         return(
-            <Navbar/>
+            <div>
+                <Navbar/>
+                {props.children}
+            </div>
         );
 }
 
