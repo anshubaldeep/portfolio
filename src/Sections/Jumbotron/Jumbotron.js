@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Avatar from '../../Assets/Avatar.png';
+import ReactRotatingText from 'react-rotating-text';
 import './Jumbotron.css'
 
 
@@ -17,7 +18,7 @@ const JumbotronComponent=()=>{
                         <Col lg={9}  md={7} xs={12} className='mt-lg-5 mt-5'>
                             <p>Start/&gt;</p>
                             <h1>Hi, my name is <span className='name font-weight-bold'>Baldeep Singh</span></h1>
-                            <h1>i <span className='font-italic'>design</span> and <span className='text-monospace'>develop</span> </h1>
+                            <h1>i <span className='font-italic'>design</span> and <span className='text-monospace'>develop</span><br/> <ReactRotatingText items={develop} /></h1>
                             <h4>Let me show You....</h4>
                         </Col>
                         <Col lg={3} md={5} xs={12}>
