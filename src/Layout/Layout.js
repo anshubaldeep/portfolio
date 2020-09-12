@@ -1,15 +1,15 @@
 import React from 'react';
-//import classes from './Layout.module.css';
 import Navbar from './Navbar/Navbar';
+import Aux from '../hoc/Aux';
 
 
 
 const NavbarComponent=(props)=>{
         return(
-            <div>
+            <Aux>
                 <Navbar/>
                 {props.children}
-            </div>
+            </Aux>
         );
 }
 

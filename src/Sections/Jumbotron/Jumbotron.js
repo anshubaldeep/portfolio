@@ -5,21 +5,21 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Avatar from '../../Assets/Avatar.png';
 import ReactRotatingText from 'react-rotating-text';
-import './Jumbotron.css'
+
 
 
 const JumbotronComponent=()=>{
         const develop=['websites','webapps','mobile-apps','ux/ui'];
         
         return(
-            <Jumbotron>
+            <Jumbotron fluid className="mt-3 w-100">
                 <Container>
                     <Row>
                         <Col lg={9}  md={7} xs={12} className='mt-lg-5 mt-5'>
-                            <p>Start/&gt;</p>
+                            <p className='section-start'>Start/&gt;</p>
                             <h1>Hi, my name is <span className='name font-weight-bold'>Baldeep Singh</span></h1>
                             <h1>i <span className='font-italic'>design</span> and <span className='text-monospace'>develop</span><br/> <ReactRotatingText items={develop} /></h1>
-                            <h4>Let me show You....</h4>
+                            <h4 className="mt-md-3">Let me show You....</h4>
                         </Col>
                         <Col lg={3} md={5} xs={12}>
                             <div className='text-center mt-lg-5 mt-3'>

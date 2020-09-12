@@ -1,20 +1,22 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+import './App.scss';
 import Layout from './Layout/Layout';
 import Jumbotron from '../src/Sections/Jumbotron/Jumbotron';
+import Aux from './hoc/Aux';
+import WorkSection from './Sections/Work/Work';
 
 function App() {
   return (
-    <div className="App">
+    <Aux>
       <header className="App-header">
         <Layout>
-          <div>
+          <Aux>
             <Jumbotron/>
-          </div>
+            {/* <WorkSection/> */}
+          </Aux>
         </Layout>
       </header>
-    </div>
+    </Aux>
   );
 }
 
