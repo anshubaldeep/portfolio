@@ -12,7 +12,7 @@ function App() {
         <Layout>
           <Aux>
             <Jumbotron/>
-            {/* <WorkSection/> */}
+            <WorkSection/> 
           </Aux>
         </Layout>
       </header>

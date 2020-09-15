@@ -1,58 +1,88 @@
-import React,{useState,useRef,useEffect} from 'react';
+import React from 'react';
 import Container from 'react-bootstrap/Container';
 import img from '../../Assets/logo.png';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Card from 'react-bootstrap/Card';
+import Tilt from 'react-tilt';
+import Aux from '../../hoc/Aux';
+
+const projects=[
+    {
+        name:'Project 1',
+        path:require('../../Assets/logo.png'),
+        alt:'Project 1',
+        description:'lorem ipsum',
+    },
+
+    {
+        name:'Project 1',
+        path:require('../../Assets/logo.png'),
+        alt:'Project 1',
+        description:'lorem ipsum',
+    },
+
+    {
+        name:'Project 1',
+        path:require('../../Assets/logo.png'),
+        alt:'Project 1',
+        description:'lorem ipsum',
+    },
+
+    {
+        name:'Project 1',
+        path:require('../../Assets/logo.png'),
+        alt:'Project 1',
+        description:'lorem ipsum',
+    },
+
+    {
+        name:'Project 1',
+        path:require('../../Assets/logo.png'),
+        alt:'Project 1',
+        description:'lorem ipsum',
+    },
+
+    {
+        name:'Project 1',
+        path:require('../../Assets/logo.png'),
+        alt:'Project 1',
+        description:'lorem ipsum',
+    },
+]
 
 
 const WorkSection=()=>{
-    const [dimensions,setDimensions]=useState({height:0,width:0});
-    const boxRef = useRef(null);
-    useEffect(() => {
-        setDimensions({height:boxRef.current.clientHeight,width:boxRef.current.clientWidth});
-        
-    },[]);
-
-    const handleMove=(e)=>{
-            console.log(dimensions);
-            console.log(boxRef.current)
-            // /*
-            //   * Get position of mouse cursor
-            //   * With respect to the boxRef.currentement
-            //   * On mouseover
-            //   */
-            // /* Store the x position */
-            // const xVal = e.layerX
-            // /* Store the y position */
-            // const yVal = e.layerY
-            
-            // /*
-            //   * Calculate rotation valuee along the Y-axis
-            //   * Here the multiplier 20 is to
-            //   * Control the rotation
-            //   * You can change the value and see the results
-            //   */
-            // const yRotation = 20 * ((xVal - dimensions.width / 2) / dimensions.width)
-            
-            // /* Calculate the rotation along the X-axis */
-            // const xRotation = -20 * ((yVal - dimensions / 2) / dimensions)
-            
-            // /* Generate string for CSS transform property */
-            // const string = 'perspective(500px) scale(1.1) rotateX(' + xRotation + 'deg) rotateY(' + yRotation + 'deg)'
-            
-            // /* Apply the calculated transformation */
-            // boxRef.current.style.transform = string
-          }
-          
-          
-
-    
+        const projectImages=projects.map(proj=>{
+            return (
+                
+                <Col md={6} sm={12} className="d-flex justify-content-center mt-md-5 mt-2">
+                    <Tilt className="Tilt" options={{ max : 25 , scale: 1.1}} style={{ height: 291, width: 300 }}>
+                        <Card className="bg-transparent text-white text-center ml-md-0 ml-5">
+                            <Card.Img src={proj.path} alt={proj.alt} />
+                            <Card.ImgOverlay className="Tilt-inner text-left">
+                                <Card.Title className='font-weight-bold' style={{position:"absolute",bottom:40 , left:-45}}>{proj.name}<hr/></Card.Title>
+                            </Card.ImgOverlay>
+                        </Card>
+                    </Tilt>
+                </Col>
+                
+            )
+        })
         return(
-            <Container>
+            <Container className='work'>
+            <Row>
+            <Col>
                 <p className='section-start'>Work/&gt;</p>
                 <h4>Some selected projects.....</h4>
-                <br/>
-                <div onMouseOver={handleMove} ref={boxRef}>
-                <img src={img} alt='project'/>
-                </div>
+                <br/> 
+                <Row className='justify-content-center'>
+                    {projectImages}
+                </Row>
+                
+            </Col>
+            </Row>
+            <br/>
             </Container>
         );
 }

@@ -2,20 +2,13 @@
 $highlight-color:#f39339;
 $text-color:#ffffff;
 
-@mixin zero-margin($pad-up-dn, $pad-left-right) {
-	margin:0px auto;
-	padding: $pad-up-dn $pad-left-right 40px;
+    
+.section 
+{ 
+    height: 100vh;
+    padding-top: 110px;
 }
 
-.row-header{
-    @include zero-margin(125px,0px);
-    margin-top: -78px;
-}
-
-.row-content {
-    @include zero-margin(90px,0px);
-    min-height:400px;
-}
 
 
 
@@ -54,6 +47,8 @@ nav{
     
     background-color: transparent;
     text-align: left;
+    display: flex;
+    align-items: center;
     .name{
         color: $highlight-color;
     }
@@ -77,14 +72,13 @@ nav{
         color: $highlight-color;
       }
     
-      @media only screen and (max-width: 768px){
-          .img{
-              width: 241px;
-              height: 255px;
-          }
-      }
 }
 
+.work{
+    hr{
+      border: #ffffff 2px solid;
+    }
+}
 
 .App {
     text-align: center;
@@ -126,4 +120,29 @@ nav{
   }
 
 
-  
+
+
+
+
+
+  @media only screen and (max-width: 768px){
+    .section{
+        margin-top: 40px;
+    }
+
+    .jumbotron{
+        margin-top: 0px !important;
+        display: block;
+        .img{
+        width: 241px;
+        height: 255px;
+        }
+    }
+
+    .work{
+        .tilt{
+            width: 241px;
+            height: 255px;
+        }
+    }
+}  

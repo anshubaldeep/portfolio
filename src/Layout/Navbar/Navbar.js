@@ -12,7 +12,7 @@ const NavbarComponent=()=>{
             <Navbar.Brand href="#home"><img className='navbar-logo' src={logo} alt='logo'/></Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
-              <Nav className='ml-auto' activeKey="#home">
+              <Nav className='ml-auto text-center' activeKey="#home">
               <Nav.Item><Nav.Link className='nav-link font-weight-bold custom-nav-link active' href='#home'>Start/&gt;</Nav.Link> </Nav.Item>
               {nav}
               </Nav>

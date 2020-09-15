@@ -12,17 +12,17 @@ const JumbotronComponent=()=>{
         const develop=['websites','webapps','mobile-apps','ux/ui'];
         
         return(
-            <Jumbotron fluid className="mt-3 w-100">
+            <Jumbotron fluid className="w-100 section align-items-center">
                 <Container>
                     <Row>
-                        <Col lg={9}  md={7} xs={12} className='mt-lg-5 mt-5'>
+                        <Col lg={9}  md={7} xs={12} className=''>
                             <p className='section-start'>Start/&gt;</p>
                             <h1>Hi, my name is <span className='name font-weight-bold'>Baldeep Singh</span></h1>
                             <h1>i <span className='font-italic'>design</span> and <span className='text-monospace'>develop</span><br/> <ReactRotatingText items={develop} /></h1>
                             <h4 className="mt-md-3">Let me show You....</h4>
                         </Col>
                         <Col lg={3} md={5} xs={12}>
-                            <div className='text-center mt-lg-5 mt-3'>
+                            <div className='text-center'>
                                 <img src={Avatar} alt='My_Avatar' className='img img-responsive'/>
                             </div>
                         </Col>
