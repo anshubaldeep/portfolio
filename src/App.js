@@ -2,7 +2,7 @@ import React from 'react';
 import './App.scss';
 import Layout from './Layout/Layout';
 import Jumbotron from '../src/Sections/Jumbotron/Jumbotron';
-import Aux from './hoc/Aux';
+import Aux from './hoc/hoc';
 import WorkSection from './Sections/Work/Work';
 
 function App() {
