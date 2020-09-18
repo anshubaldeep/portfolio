@@ -6,7 +6,7 @@ import logo from '../../Assets/logo.png'
 
 const NavbarComponent=()=>{
         const navItems=['Work','About','Contact'];
-        const nav=navItems.map(i=> <Nav.Item><Nav.Link className='nav-link font-weight-bold custom-nav-link'>{i}/&gt;</Nav.Link> </Nav.Item>);
+        const nav=navItems.map((i,index)=> <Nav.Item key={index}><Nav.Link className='nav-link font-weight-bold custom-nav-link'>{i}/&gt;</Nav.Link> </Nav.Item>);
         return(
             <Navbar fixed ='top' collapseOnSelect expand="sm" variant="dark">
             <Navbar.Brand href="#home"><img className='navbar-logo' src={logo} alt='logo'/></Navbar.Brand>
