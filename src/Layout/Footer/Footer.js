@@ -11,11 +11,11 @@ import {
 
 const Footer=()=>{
         return(
-            <Container>
+            <Container className='Footer'>
                 <p className='section-start mt-5'>Contact/&gt;</p>
                 <br/>
                 <p>Find me on:</p>
-                <Row className='text-center'>
+                <Row className='text-center justify-content-center'>
                     <Col md={3} xs={12}><a href='#'><FontAwesomeIcon icon={faGithubAlt}/> cOFFEE</a></Col>
                     <Col md={3} xs={12}><a href='#'><FontAwesomeIcon icon={faGoogle}/> cOFFEE</a></Col>
                     <Col md={3} xs={12}><a href='#'><FontAwesomeIcon icon={faTwitter}/> cOFFEE</a></Col>
