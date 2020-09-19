@@ -13,11 +13,14 @@ const WorkSection=()=>{
         const [projects,setProject]=useState([
             {
                 id:1,
-                name:'Project ',
-                path:require('../../Assets/logo.png'),
+                name:'Lex Bolster ',
+                path:require('../../Assets/projects/thumbnails/lex_bolster.jpg'),
                 alt:'Project ',
                 description:'lorem ipsum fbvdbdfdbd11111',
-                modalShow:false
+                modalShow:false,
+                link:'https://anshubaldeep.github.io/Lex-Bolster/index.html',
+                techStack:['html','css','javaScript'],
+                fpScreenshot:require('../../Assets/projects/fp_screenshots/lex_bolster.png')
             },
         
             {
@@ -26,7 +29,10 @@ const WorkSection=()=>{
                 path:require('../../Assets/logo.png'),
                 alt:'Project ',
                 description:'lorem ipsum 222222',
-                modalShow:false
+                modalShow:false,
+                link:'',
+                techStack:['html','css','javaScript'],
+                // fpScreenshot:require('../../Assets/projects/fp_screenshots')
             },
         
             {
@@ -35,7 +41,10 @@ const WorkSection=()=>{
                 path:require('../../Assets/logo.png'),
                 alt:'Project ',
                 description:'lorem ipsum 3333333',
-                modalShow:false
+                modalShow:false,
+                link:'',
+                techStack:['html','css','javaScript'],
+                // fpScreenshot:require('../../Assets/projects/fp_screenshots')
             },
         
             {
@@ -44,7 +53,10 @@ const WorkSection=()=>{
                 path:require('../../Assets/logo.png'),
                 alt:'Project ',
                 description:'lorem ipsum 44444',
-                modalShow:false
+                modalShow:false,
+                link:'',
+                techStack:['html','css','javaScript'],
+                // fpScreenshot:require('../../Assets/projects/fp_screenshots')
             },
         
             {
@@ -53,7 +65,10 @@ const WorkSection=()=>{
                 path:require('../../Assets/logo.png'),
                 alt:'Project ',
                 description:'lorem ipsum 55555',
-                modalShow:false
+                modalShow:false,
+                link:'',
+                techStack:['html','css','javaScript'],
+                // fpScreenshot:require('../../Assets/projects/fp_screenshots')
             },
         
             {
@@ -62,7 +77,10 @@ const WorkSection=()=>{
                 path:require('../../Assets/logo.png'),
                 alt:'Project ',
                 description:'lorem ipsum 66666',
-                modalShow:false
+                modalShow:false,
+                link:'',
+                techStack:['html','css','javaScript'],
+                // fpScreenshot:require('../../Assets/projects/fp_screenshots')
             },
         ]);
 
@@ -86,22 +104,37 @@ const WorkSection=()=>{
                         <Card className="bg-transparent text-white text-center ml-md-0 ml-5" onClick={()=>handleShow(index)}>
                             <Card.Img src={proj.path} alt={proj.alt} />
                             <Card.ImgOverlay className="text-left">
-                                <Card.Title className='tilt-inner font-weight-bold' style={{position:"absolute",bottom:40 , left:-45}}>{proj.name} {proj.id}<hr/></Card.Title>
+                                <Card.Title className='tilt-inner font-weight-bold' style={{position:"absolute",bottom:40 , left:-45}}>{proj.name}<hr/><p className='mt-4' style={{fontSize:'0.5em'}}>→ 0{proj.id}</p></Card.Title>
                             </Card.ImgOverlay>
                         </Card>
                     </Tilt>
 
-                    <Modal key ={index} show={projects[index].modalShow} onHide={()=>handleClose(index)} className='custom-map-modal' centered>
+                    <Modal key ={index} show={projects[index].modalShow} onHide={()=>handleClose(index)} className='custom-map-modal' variant="dark" centered>
                         <Modal.Header closeButton>
-                          <Modal.Title>{proj.name} {proj.id}</Modal.Title>
+                          <Modal.Title >{proj.name}</Modal.Title>
                         </Modal.Header>
-                        <Modal.Body>{proj.description}</Modal.Body>
+                        <Modal.Body>
+                            <Row className='overflow-auto'>
+                                <Col md={{span:9, order:'first' }} xs={{ span: 12, order: 'last' }} className='modal-image'>
+                                    <div className='fullpage'>
+                                        <img className='img img-responsive w-100' src={proj.fpScreenshot} alt={proj.alt}></img>
+                                    </div>
+                                </Col>
+                                <Col xs={12} md={3} className='overflow-auto project-content'>
+                                    <p><span className='heading'>Technology Stack:</span><br/> <span className='content'>{proj.techStack.map(i=>('#'+i+' '))}</span></p>
+                                    <p className='mt-5'><span className='heading'>Description:</span><br/><span className='content'>{proj.description}</span></p>
+                                    <br/>
+                                    
+                                        {proj.link.length > 0 &&
+                                                <Button variant='primary' href={proj.link} target='_blank'>VISIT</Button>   
+                                        }
+                                    
+                                </Col>
+                            </Row>
+                        </Modal.Body>
                         <Modal.Footer>
                           <Button variant="secondary" onClick={()=>handleClose(index)}>
                             Close
-                          </Button>
-                          <Button variant="primary" onClick={()=>handleClose(index)}>
-                            Save Changes
                           </Button>
                         </Modal.Footer>
                     </Modal>

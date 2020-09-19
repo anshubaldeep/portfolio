@@ -1,7 +1,10 @@
 @import '~bootstrap/scss/bootstrap.scss';
-$highlight-color:#f39339;
-$text-color:#ffffff;
+@import './prism.css';
 
+$highlight-color:#f39339;
+$secondary-color: #895a25;
+$text-color:#ffffff;
+$bg-color:#272622;
     
 .section 
 { 
@@ -16,17 +19,53 @@ $text-color:#ffffff;
    margin: 0;
    padding: 0;
  }
+ .fullpage{
+   overflow: auto !important;
+   max-height: 70vh;
+ }
+ .modal-header{
+   border-bottom: none;
+ }
+ .modal-title{
+   color: $highlight-color;
+ }
  .modal-content {
    height: auto;
+   background-color: $bg-color;
    min-height: 90vh;
    min-width: 94vw ;
    margin-left: 3vw;
    border-radius: 0;
+   .content{
+    color:#ffffff;
+   }
+   .close{
+     color: #ffffff;
+   }
+   .heading{
+     color: $highlight-color;
+   }
+   .modal-footer{
+     border-top: none;
+   }
+   .btn-primary{
+     background-color: $secondary-color;
+     border-radius: 12px;
+     margin-top: 20px;
+     width: 130px;
+   }
+   .btn-primary:hover{
+     background-color: $highlight-color;
+     box-shadow: 0px 3px 10px $highlight-color;
+   }
+   .btn-secondary{
+     background-color: $secondary-color;
+   }
 }
 }
 
 nav{
-    background-color:#272622 !important;
+    background-color:$bg-color !important;
     .navbar-logo{
         width: 130px;
         height: 130px;
@@ -42,7 +81,7 @@ nav{
     }
     
     .custom-nav-link{
-        color: #895a25 !important;
+        color: $secondary-color !important;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         text-transform: uppercase;
         font-size: 0.75em;
@@ -58,6 +97,8 @@ nav{
 
 .react-rotating-text-cursor {
   animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
+  color: $highlight-color;
+  font-weight: bolder; ;
 }
 
 @keyframes blinking-cursor {
@@ -105,21 +146,46 @@ nav{
 
 .work{
     hr{
-      border: #ffffff 4px solid;
+      border: #ffffff 2px solid;
       
     }
     .card-img{
-      filter: brightness(70%);
+      filter: brightness(50%);
+      height: 100%;
     }
     .tilt-inner{
-      font-size: 5rem;
-      transform: perspective(400px) translate3d(-400px,-20px,-800px);;
+      font-size: 2rem;
+      // transform: perspective(400px) translate3d(-400px,-200px,-800px);;
     }
     .card-img-overlay:hover,.card-img-overlay:active{
       text-shadow: 0px 3px 20px #FFFFFF;
       box-shadow: 0px 3px 20px $highlight-color;
     }
+    
 }
+
+
+.About{
+  background-color: #353430;
+  code{
+    font-size: 0.9em;
+  }
+  :not(pre) > code[class*="language-"], pre[class*="language-"] {
+    background-color: #353430;
+  }
+  .language-javascript{
+    color: #fafafa;  
+  }
+  .cursor:before {
+    opacity: 0;
+    color: #ffffff;
+    content: "|";
+    -webkit-animation: blink .8s infinite;
+    animation: blink .8s infinite;
+}
+}
+
+
 
 .App {
     text-align: center;
@@ -137,7 +203,7 @@ nav{
   }
   
   .App-header {
-    background-color:#272622;
+    background-color: $bg-color;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -179,6 +245,21 @@ nav{
         height: 255px;
         }
     }
+    .custom-map-modal {
+      overflow: auto; 
+      .modal-body{
+        max-height: calc(100vh - 210px);
+        overflow-y: auto;
+      }
+      .fullpage{
+        overflow:none !important;
+        height: none;
+      }
+      .project-content{
+        height: 80vh;
+        max-height: 100vh;
+      }
+    }
 
     .work{
         .tilt{
@@ -186,13 +267,19 @@ nav{
             height: 255px;
         }
         .tilt-inner{
-          font-size: 4rem;
-          transform: perspective(400px) translate3d(-250px,-20px,-700px);
+          font-size: 1.5em;
+          // transform: perspective(400px) translate3d(-250px,-20px,-700px);
         }
-        .custom-map-modal { 
            .modal-content {
             margin-left: 0vw;
           }
-        }
+    }
+
+    .About{
+      font-size: 0.85em;
+      code[class*="language-"],
+      pre[class*="language-"] {
+        white-space: pre-line;
+      }
     }
 }  
