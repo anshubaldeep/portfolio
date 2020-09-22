@@ -100,7 +100,7 @@ const WorkSection=()=>{
             return (
                 
                 <Col md={6} sm={12} className="d-flex justify-content-center mt-md-5 mt-2" key={index}>
-                    <Tilt className="Tilt" options={{ max : 25 , scale: 1.1}} style={{ height: 291, width: 300 }}>
+                    <Tilt className="Tilt" options={{ max : 25 , scale: 1.1}} style={{ height: 441, width: 450 }}>
                         <Card className="bg-transparent text-white text-center ml-md-0 ml-5" onClick={()=>handleShow(index)}>
                             <Card.Img src={proj.path} alt={proj.alt} />
                             <Card.ImgOverlay className="text-left">
