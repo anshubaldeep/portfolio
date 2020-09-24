@@ -144,7 +144,7 @@ const WorkSection=()=>{
             )
         })
         return(
-            <Container className='work'>
+            <Container className='work mt-5' id='work'>
             <Row>
             <Col>
                 <p className='section-start'>Work/&gt;</p>

@@ -32,9 +32,7 @@ const MyJourney=()=>{
         ····]
         ··}
         ·· skills() {
-        ····return [ 'HTML/CSS/JS', 'Vue', 'Node.js', 'jQuery', 'Bootstrap/Bulma/Material Design', 'Webpack/Gulp/Grunt', 'SASS/Less', 'npm/yarn/bower', 'Docker', 'PWA', 'SSR', 'SPA', 'GIT/CVS', 'Cordova', 'NativeScript', 'Electron', 'Web-extensions', 'Web Sockets', 'Firebase, 'RWD/W3C/ARIA/WCAG', 'XSLT', 'Smarty/Twig', 'PHP', 'MySQL/NoSQL', 'Wordpress', 'Photoshop', 'Illustrator', 'After Effects', 'Premiere', 'Motion design', 'UX/UI', 'DTP', 'C#', 'Unity', 'TypeScript', 'NestJS'  ]
-        ··}
-        }`
+        ····return [ 'HTML/CSS/JS', 'Vue', 'Node.js', 'jQuery', 'Bootstrap/Bulma/Material Design', 'Webpack/Gulp/Grunt', 'SASS/Less', 'npm/yarn/bower', 'Docker', 'PWA', 'SSR', 'SPA', 'GIT/CVS', 'Cordova', 'NativeScript', 'Electron', 'Web-extensions', 'Web Sockets', 'Firebase, 'RWD/W3C/ARIA/WCAG', 'XSLT', 'Smarty/Twig', 'PHP', 'MySQL/NoSQL', 'Wordpress', 'Photoshop', 'Illustrator', 'After Effects', 'Premiere', 'Motion design', 'UX/UI', 'DTP', 'C#', 'Unity', 'TypeScript', 'NestJS' `
         const code2=`
         class Baldeep_Singh {
             // I am a technology enthusiast who loves new challenges :)
@@ -62,11 +60,7 @@ const MyJourney=()=>{
               ]
             }
             skills() {
-              return [ 'HTML/CSS/JS', 'Vue', 'Node js', 'jQuery', 'Bootstrap/Bulma/Material Design', 'Webpack/Gulp/Grunt', 'SASS/Less', 'npm/yarn/bower', 'Docker', 'PWA', 'SSR', 'SPA', 'GIT/CVS', 'Cordova', 'NativeScript', 'Electron', 'Web-extensions', 'Web Sockets', 'Firebase, 'RWD/W3C/ARIA/WCAG', 'XSLT', 'Smarty/Twig', 'PHP', 'MySQL/NoSQL', 'Wordpress', 'Photoshop', 'Illustrator', 'After Effects', 'Premiere', 'Motion design', 'UX/UI', 'DTP', 'C#', 'Unity', 'TypeScript', 'NestJS'  ]
-            }
-          }
-            →            
-        `
+              return [ 'HTML/CSS/JS', 'Vue', 'Node js', 'jQuery', 'Bootstrap/Bulma/Material Design', 'Webpack/Gulp/Grunt', 'SASS/Less', 'npm/yarn/bower', 'Docker', 'PWA', 'SSR', 'SPA', 'GIT/CVS', 'Cordova', 'NativeScript', 'Electron', 'Web-extensions', 'Web Sockets', 'Firebase, 'RWD/W3C/ARIA/WCAG', 'XSLT', 'Smarty/Twig', 'PHP', 'MySQL/NoSQL', 'Wordpress', 'Photoshop', 'Illustrator', 'After Effects', 'Premiere', 'Motion design', 'UX/UI', 'DTP', 'C#', 'Unity', 'TypeScript', 'NestJS' `
        
     let code=code1;
     const getWidth = () => window.innerWidth 
@@ -100,17 +94,23 @@ useEffect(()=>{
      code=code2;
  }       
 
- 
+ const code3=` ]
+ ··}
+ }`
 
         return(
-            <Container fluid className='MyJourney mt-5'>
-                <Container className='line-numbers'>
+            <Container fluid className='MyJourney'>
+                <Container className='line-numbers ' id='myjourney'>
                 <p className='section-start mt-5'>MyJourney/&gt;</p>
                 <pre className='language-javascript code-wrp line-numbers'>
                     <code className='language-javascript'>
                         {code}
+                    </code> 
+                        <span className="react-rotating-text-cursor">|</span> 
+                    <code>
+                        {code3}
                     </code>
-                    <span className="react-rotating-text-cursor">|</span>
+                    
                 </pre>
                 </Container>
             </Container>

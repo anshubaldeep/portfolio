@@ -12,10 +12,12 @@ const JumbotronComponent=()=>{
         const develop=['websites','webapps','mobile-apps','ux/ui'];
         
         return(
-            <Jumbotron fluid className="w-100 section align-items-center">
+            <Jumbotron fluid className="w-100 section align-items-center" id='home'>
                 <Container>
                     <Row>
                         <Col lg={9}  md={7} xs={12} className=''>
+                        {/* <div class="timeline alt">
+                        </div> */}
                             <p className='section-start'>Start/&gt;</p>
                             <h1>Hi, my name is <span className='name font-weight-bold'>Baldeep Singh</span></h1>
                             <h1>i <span className='font-italic'>design</span> and <span className='text-monospace'>develop</span><br/> <ReactRotatingText items={develop} /></h1>

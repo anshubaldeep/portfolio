@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import logo from '../../Assets/logo.png';
+import Scrollspy from 'react-scrollspy';
 
 
 const NavbarComponent=()=>{
@@ -9,7 +10,8 @@ const NavbarComponent=()=>{
         show: true,
         scrollPos: 0
     });
-
+    const [expand,setExpand]=useState(false);
+    
     const handleScroll=()=> {
         const { scrollPos } =state;
         setState({
@@ -18,6 +20,9 @@ const NavbarComponent=()=>{
         });
       }
 
+    const handleExpand=()=>{
+      setExpand(!expand);
+    }
 
     useEffect(()=>{
         window.addEventListener("scroll", handleScroll);
@@ -26,17 +31,45 @@ const NavbarComponent=()=>{
         }
     })
 
-  const navItems=['Work','About','Contact'];
-  const nav=navItems.map((i,index)=> <Nav.Item key={index}><Nav.Link className='nav-link font-weight-bold custom-nav-link'>{i}/&gt;</Nav.Link> </Nav.Item>);
+
+    
+  const navItems=[
+                    // {
+                    //   name:'Start',
+                    //   id:'#'
+                    // },
+                    {
+                      name:'About',
+                      id:'#about'
+                    },
+                    {
+                      name:'Work',
+                      id:'#work'
+                    },
+                    {
+                      name:'My Journey',
+                      id:'#myjourney'
+                    },
+                    {
+                      name:'Contact',
+                      id:'#contact'
+                    },
+                  ];
+  const nav=navItems.map((i,index)=> <Nav.Item key={index}><li><Nav.Link href={i.id}  className=''>{i.name}/&gt;</Nav.Link></li> </Nav.Item>);
+ 
     return(
-        <Navbar fixed ='top' collapseOnSelect expand="sm" variant="dark" className={state.show ? "active-navbar" : "hidden-navbar"}>
+        <Navbar fixed ='top' collapseOnSelect expand="sm" variant="dark" className={`${state.show ? "active-navbar" : "hidden-navbar"} ${expand?'navbar-expanded':''}`} onToggle={handleExpand}>
         <Navbar.Brand href="#home"><img className='navbar-logo' src={logo} alt='logo'/></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className='ml-auto text-center' activeKey="#home">
-          <Nav.Item><Nav.Link className='nav-link font-weight-bold custom-nav-link active' href='#home'>Start/&gt;</Nav.Link> </Nav.Item>
+          <Nav className='ml-auto text-center' >
+          <Scrollspy items={ ['home', 'about', 'work','myjourney','contact'] } currentClassName="active-option">
+          <Nav.Item><li><Nav.Link className='' href='#home'>Start/&gt;</Nav.Link></li> </Nav.Item>
           {nav}
+          </Scrollspy>
           </Nav>
+          
+                
         </Navbar.Collapse>
       </Navbar>
     );

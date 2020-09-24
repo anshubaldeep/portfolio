@@ -7,16 +7,18 @@ import WorkSection from './Sections/Work/Work';
 import MyJourneySection from './Sections/MyJourney/MyJourney';
 import AboutSection from './Sections/About/About';
 
+
+
+
 function App() {
   return (
     <Aux>
-      
         <Layout>
           <Aux>
           <header className="App-header">
-            <Jumbotron/>
-            <AboutSection/>
-            <WorkSection/> 
+            <Jumbotron />
+            <AboutSection />
+            <WorkSection /> 
             <MyJourneySection/>
           </header>
           </Aux>

@@ -7,6 +7,10 @@ $text-color:#ffffff;
 $bg-color:#272622;
 $layout-color:#21201d;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body{
   background-color: $layout-color;
   font-size: calc(10px + 2vmin);
@@ -94,9 +98,39 @@ body{
   transition: all 200ms ease-out;
   transform: translate(0, -100%);
 }
+
 nav{
     background-color:transparent !important;
-    
+    .nav-link{
+      color:$secondary-color !important;
+      font-weight: bold;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      text-transform: uppercase;
+      font-size: 0.75em;
+    }
+    .nav-link:hover{
+      color: $highlight-color !important;
+    }
+    ul{
+      list-style: none;
+      div{
+        float: left;
+      }
+    }
+    li{
+      float: left;
+    }
+    li {
+      a{
+        display: block;
+      }
+    }
+    .active-option{
+      color: $highlight-color !important;
+      a{
+        color: $highlight-color !important;
+      }
+    }
     .navbar-logo{
         width: 130px;
         height: 130px;
@@ -111,18 +145,6 @@ nav{
         
     }
     
-    .custom-nav-link{
-        color: $secondary-color !important;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        text-transform: uppercase;
-        font-size: 0.75em;
-    }
-    .custom-nav-link:hover,.custom-nav-link:active,.custom-nav-link.show{
-        color: $highlight-color !important;
-    }
-    .navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
-        color: $highlight-color !important;
-    }
     
 }
 
@@ -177,19 +199,70 @@ nav{
 
 
 .About{
-  font-size: 0.7em;
+  font-size: 0.9em;
   margin-bottom: 150px;
+  margin-top: 90px;
   .about-text{
     padding: 20px;
   }
   h1{
     font-weight: bolder;
-    font-size: 1.5em;
+    font-size: 1.25em;
     margin-bottom: 15px;
+  }
+  .section-card{
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 50px;
+    font-size: 0.75em;
+    .section-img{
+      width: 58px;
+      height: 58px;
+      margin-bottom: 1rem;
+    }
+    .card-title{
+      font-size: 1.25em;
+      margin-top: 1em;
+      margin-bottom: 1.5rem;
+    }
+    .card-subtitle{
+      margin-top: 2.5em;
+      margin-bottom: 1.5rem;
+      height: 85px;
+    }
+    .objects-section{
+      height: 70px;
+      margin-bottom: 1.85rem;
+    }
+    .card{
+      height: 600px;
+      background-color: $bg-color;
+      color: #ffffff;
+      margin-right: 0px;
+      border: solid 4px $highlight-color;
+    }
+    .start{
+      border-radius: 15px 0px 0px 15px;
+    }
+    .middle{
+      border-left: 0px solid !important;
+      border-right: 0px solid !important; 
+      border-radius: 0px ;
+    }
+    .last{
+      border-radius: 0px 15px 15px 0px;
+    }
+    .section-line{
+      color: $highlight-color;
+      font-weight: bold;
+    }
   }
 }
 
 .work{
+  padding-top: 80px;
+  margin-top: -80px;
     hr{
       border: #ffffff 2px solid;
       
@@ -213,6 +286,11 @@ nav{
 
 .MyJourney{
   background-color: #353430;
+  margin-top: 100px;
+  #myjourney{
+    padding-top: 30px;
+    margin-top: 30px;
+  }
   code{
     font-size: 0.9em;
   }
@@ -316,7 +394,20 @@ nav{
   }
 
 
+  .timeline {
+    width: 4px;
+    height: 300%;
+    left: 10px;
+    top: 8px;
+    z-index: 9;
+    position: absolute;
+    background-color: $highlight-color;
+}
 
+.timeline.alt {
+
+  height: 1660%;
+}
 
 
 
@@ -325,7 +416,25 @@ nav{
     .section{
         margin-top: 40px;
     }
-
+    .navbar-expanded{
+      padding: 10px !important;
+      background-image: linear-gradient(-180deg,$bg-color,$bg-color 88%,$bg-color 99%);
+      box-shadow: 0 0 50px 80px $bg-color;
+    }
+    nav {
+      ul{
+        float: none;
+        div{
+          float: none;
+        }
+      }
+      li{
+        float: none;
+      }
+      .nav-link{
+      font-size: 1.2em;
+    }
+  }
     .jumbotron{
         margin-top: 0px !important;
         display: block;
@@ -347,6 +456,17 @@ nav{
       .project-content{
         height: 80vh;
         max-height: 100vh;
+      }
+    }
+
+    .About{
+      .section-card{
+        padding: 30px;
+        font-size: 1.15em;
+        .start,.middle,.last{
+          border: 3px solid $highlight-color !important;
+          border-radius: 15px;
+        }
       }
     }
 

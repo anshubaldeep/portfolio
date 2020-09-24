@@ -77,7 +77,7 @@ const Footer=()=>{
             )
         });
         return(
-            <Container className='Footer'>
+            <Container className='Footer' id='contact'>
             
                 <p className='section-start mt-4'>Contact/&gt;</p>
             
