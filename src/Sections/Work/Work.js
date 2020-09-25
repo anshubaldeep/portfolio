@@ -11,10 +11,36 @@ import Tilt from 'react-tilt';
 
 const WorkSection=()=>{
         const [projects,setProject]=useState([
+            
+        
             {
                 id:1,
+                name:'Warehouse Management App ',
+                path:require('../../Assets/projects/thumbnails/Warehouse-management.jpg'),
+                alt:'Project ',
+                description:'lorem ipsum 222222',
+                modalShow:false,
+                link:'',
+                techStack:['html','css','javaScript'],
+                fpScreenshot:require('../../Assets/projects/fp_screenshots/warehouse-management.jpg')
+            },
+        
+            {
+                id:2,
+                name:'Rescue Maps ',
+                path:require('../../Assets/projects/thumbnails/Rescue-maps.jpg'),
+                alt:'Project ',
+                description:'lorem ipsum 3333333',
+                modalShow:false,
+                link:'',
+                techStack:['html','css','javaScript'],
+                fpScreenshot:require('../../Assets/projects/fp_screenshots/rescue-maps.jpg')
+            },
+
+            {
+                id:3,
                 name:'Lex Bolster ',
-                path:require('../../Assets/projects/thumbnails/lex_bolster.jpg'),
+                path:require('../../Assets/projects/thumbnails/Lex-bolster.jpg'),
                 alt:'Project ',
                 description:'lorem ipsum fbvdbdfdbd11111',
                 modalShow:false,
@@ -24,33 +50,9 @@ const WorkSection=()=>{
             },
         
             {
-                id:2,
-                name:'Project ',
-                path:require('../../Assets/logo.png'),
-                alt:'Project ',
-                description:'lorem ipsum 222222',
-                modalShow:false,
-                link:'',
-                techStack:['html','css','javaScript'],
-                // fpScreenshot:require('../../Assets/projects/fp_screenshots')
-            },
-        
-            {
-                id:3,
-                name:'Project ',
-                path:require('../../Assets/logo.png'),
-                alt:'Project ',
-                description:'lorem ipsum 3333333',
-                modalShow:false,
-                link:'',
-                techStack:['html','css','javaScript'],
-                // fpScreenshot:require('../../Assets/projects/fp_screenshots')
-            },
-        
-            {
                 id:4,
-                name:'Project ',
-                path:require('../../Assets/logo.png'),
+                name:'Examination Mangement System ',
+                path:require('../../Assets/projects/thumbnails/Examination-management.png'),
                 alt:'Project ',
                 description:'lorem ipsum 44444',
                 modalShow:false,
@@ -104,7 +106,7 @@ const WorkSection=()=>{
                         <Card className="bg-transparent text-white text-center ml-md-0 ml-5" onClick={()=>handleShow(index)}>
                             <Card.Img src={proj.path} alt={proj.alt} />
                             <Card.ImgOverlay className="text-left">
-                                <Card.Title className='tilt-inner font-weight-bold' style={{position:"absolute",bottom:40 , left:-45}}>{proj.name}<hr/><p className='mt-4' style={{fontSize:'0.5em'}}>→ 0{proj.id}</p></Card.Title>
+                                <Card.Title className='tilt-inner font-weight-bold text-left' style={{position:"absolute",bottom:40 , left:-45,width:'260px'}}>{proj.name}<hr/><p className='mt-4' style={{fontSize:'0.5em'}}>→ 0{proj.id}</p></Card.Title>
                             </Card.ImgOverlay>
                         </Card>
                     </Tilt>

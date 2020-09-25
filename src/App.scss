@@ -236,7 +236,7 @@ nav{
       margin-bottom: 1.85rem;
     }
     .card{
-      height: 600px;
+      height: 700px;
       background-color: $bg-color;
       color: #ffffff;
       margin-right: 0px;
@@ -265,7 +265,8 @@ nav{
   margin-top: -80px;
     hr{
       border: #ffffff 2px solid;
-      
+      width:200px;
+      margin-inline-start: 0em;
     }
     .card-img{
       filter: brightness(50%);
