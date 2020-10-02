@@ -3,6 +3,7 @@
 
 $highlight-color:#f39339;
 $secondary-color: #895a25;
+$section-color: #5e370c;
 $text-color:#ffffff;
 $bg-color:#272622;
 $layout-color:#21201d;
@@ -172,6 +173,7 @@ nav{
     text-align: left;
     display: flex;
     align-items: center;
+    margin-bottom: 0px;
     .name{
         color: $highlight-color;
     }
@@ -201,7 +203,7 @@ nav{
 .About{
   font-size: 0.9em;
   margin-bottom: 150px;
-  margin-top: 90px;
+  margin-top: 70px;
   .about-text{
     padding: 20px;
   }
@@ -209,6 +211,7 @@ nav{
     font-weight: bolder;
     font-size: 1.25em;
     margin-bottom: 15px;
+    color:$highlight-color;
   }
   .section-card{
     margin-right: 0px;
@@ -263,6 +266,16 @@ nav{
 .work{
   padding-top: 80px;
   margin-top: -80px;
+  #web:before {
+    content: "WEB";
+    font-family: Roboto Mono,monospace!important;
+    font-size: 230px;
+    font-weight: 700;
+    color: $section-color;
+    position: absolute;
+    right: -30px;
+    top: -41px;
+}
     hr{
       border: #ffffff 2px solid;
       width:200px;
@@ -291,6 +304,16 @@ nav{
   #myjourney{
     padding-top: 30px;
     margin-top: 30px;
+  }
+  pre{
+    background: transparent !important;
+    overflow: hidden !important;
+    font-size: 0.85em !important;
+  }
+  .linenumber{
+    position: absolute !important;
+    left: 40px !important;
+    padding-right: 10px;
   }
   code{
     font-size: 0.9em;
@@ -472,6 +495,15 @@ nav{
     }
 
     .work{
+      h4{
+        margin-bottom: 10px;
+      }
+      #web:before{
+        font-size: 80px;
+        right: 5px;
+        top:48px;
+        
+        }
         .tilt{
             width: 241px;
             height: 255px;
@@ -486,6 +518,7 @@ nav{
     }
 
     .MyJourney{
+      
       font-size: 0.85em;
       code[class*="language-"],
       pre[class*="language-"] {

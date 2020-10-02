@@ -58,7 +58,7 @@ const WorkSection=()=>{
                 modalShow:false,
                 link:'',
                 techStack:['html','css','javaScript'],
-                // fpScreenshot:require('../../Assets/projects/fp_screenshots')
+                fpScreenshot:require('../../Assets/projects/fp_screenshots/Examination-management.jpg')
             },
         
             {
@@ -152,6 +152,7 @@ const WorkSection=()=>{
                 <p className='section-start'>Work/&gt;</p>
                 <h4>Some selected projects.....</h4>
                 <br/> 
+                <div id='web' className='mb-3 d-none d-sm-none d-md-block img-responsive'></div>
                 <Row className='justify-content-center'>
                     {projectImages}
                 </Row>

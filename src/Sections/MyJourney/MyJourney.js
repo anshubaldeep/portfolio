@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import Container from 'react-bootstrap/Container';
-import Prism from 'prismjs';
+// import Prism from 'prismjs';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism';
+
 
 
 
 const MyJourney=()=>{
-    const code1=`
-    class Baldeep_Singh {
+    const code1=`class Baldeep_Singh {
         ··// I am a technology enthusiast who loves new challenges :)
         ··// I am always trying to expand the area of my skills
         ·· constructor() {
@@ -33,6 +35,7 @@ const MyJourney=()=>{
         ··}
         ·· skills() {
         ····return [ 'HTML/CSS/JS', 'Vue', 'Node.js', 'jQuery', 'Bootstrap/Bulma/Material Design', 'Webpack/Gulp/Grunt', 'SASS/Less', 'npm/yarn/bower', 'Docker', 'PWA', 'SSR', 'SPA', 'GIT/CVS', 'Cordova', 'NativeScript', 'Electron', 'Web-extensions', 'Web Sockets', 'Firebase, 'RWD/W3C/ARIA/WCAG', 'XSLT', 'Smarty/Twig', 'PHP', 'MySQL/NoSQL', 'Wordpress', 'Photoshop', 'Illustrator', 'After Effects', 'Premiere', 'Motion design', 'UX/UI', 'DTP', 'C#', 'Unity', 'TypeScript', 'NestJS' `
+        
         const code2=`
         class Baldeep_Singh {
             // I am a technology enthusiast who loves new challenges :)
@@ -82,11 +85,6 @@ function useCurrentWidth() {
       window.removeEventListener('resize', resizeListener);
     }
   }, [])
-
-useEffect(()=>{
-    Prism.highlightAll();
-},[])
-
   return width;
 }
  let width=useCurrentWidth();
@@ -102,16 +100,23 @@ useEffect(()=>{
             <Container fluid className='MyJourney'>
                 <Container className='line-numbers ' id='myjourney'>
                 <p className='section-start mt-5'>MyJourney/&gt;</p>
-                <pre className='language-javascript code-wrp line-numbers'>
-                    <code className='language-javascript'>
+                <SyntaxHighlighter 
+                    language="javascript" 
+                    showLineNumbers showInlineLineNumbers
+                    style={tomorrow} 
+                    lineProps={{style: {wordBreak: 'break-all', whiteSpace: 'pre-wrap'}}} 
+                    wrapLines={true}
+                    >
+                {/* <pre className='language-javascript code-wrp line-numbers'>
+                    <code className='language-javascript'> */}
                         {code}
-                    </code> 
+                    {/* </code>  */}
                         <span className="react-rotating-text-cursor">|</span> 
-                    <code>
+                    {/* <code> */}
                         {code3}
-                    </code>
-                    
-                </pre>
+                    {/* </code>
+                </pre> */}
+                </SyntaxHighlighter>
                 </Container>
             </Container>
         );

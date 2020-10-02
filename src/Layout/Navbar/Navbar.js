@@ -58,7 +58,7 @@ const NavbarComponent=()=>{
   const nav=navItems.map((i,index)=> <Nav.Item key={index}><li><Nav.Link href={i.id}  className=''>{i.name}/&gt;</Nav.Link></li> </Nav.Item>);
  
     return(
-        <Navbar fixed ='top' collapseOnSelect expand="sm" variant="dark" className={`${state.show ? "active-navbar" : "hidden-navbar"} ${expand?'navbar-expanded':''}`} onToggle={handleExpand}>
+        <Navbar fixed ='top' collapseOnSelect expand="md" variant="dark" className={`${state.show ? "active-navbar" : "hidden-navbar"} ${expand?'navbar-expanded':''}`} onToggle={handleExpand}>
         <Navbar.Brand href="#home"><img className='navbar-logo' src={logo} alt='logo'/></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
