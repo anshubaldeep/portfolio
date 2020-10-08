@@ -20,7 +20,7 @@ const WorkSection=()=>{
                 alt:'Project ',
                 description:'lorem ipsum 222222',
                 modalShow:false,
-                link:'',
+                link:'http://warehousemanage.herokuapp.com/',
                 techStack:['html','css','javaScript'],
                 fpScreenshot:require('../../Assets/projects/fp_screenshots/warehouse-management.jpg')
             },
@@ -103,7 +103,7 @@ const WorkSection=()=>{
                 
                 <Col md={6} sm={12} className="d-flex justify-content-center mt-md-5 mt-2" key={index}>
                     <Tilt className="Tilt" options={{ max : 25 , scale: 1.1}} style={{ height: 441, width: 450 }}>
-                        <Card className="bg-transparent text-white text-center ml-md-0 ml-5" onClick={()=>handleShow(index)}>
+                        <Card className="bg-transparent text-center ml-md-0 ml-5" onClick={()=>handleShow(index)}>
                             <Card.Img src={proj.path} alt={proj.alt} />
                             <Card.ImgOverlay className="text-left">
                                 <Card.Title className='tilt-inner font-weight-bold text-left' style={{position:"absolute",bottom:40 , left:-45,width:'260px'}}>{proj.name}<hr/><p className='mt-4' style={{fontSize:'0.5em'}}>→ 0{proj.id}</p></Card.Title>

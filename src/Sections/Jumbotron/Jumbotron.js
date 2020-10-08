@@ -20,7 +20,7 @@ const JumbotronComponent=()=>{
                         </div> */}
                             <p className='section-start'>Start/&gt;</p>
                             <h1>Hi, my name is <span className='name font-weight-bold'>Baldeep Singh</span></h1>
-                            <h1>i <span className='font-italic'>design</span> and <span className='text-monospace'>develop</span><br/> <ReactRotatingText items={develop} /></h1>
+                            <h1>I <span className='font-italic'>design</span> and <span className='text-monospace'>develop</span><br/> <ReactRotatingText items={develop} /></h1>
                             <h4 className="mt-md-3">Let me show You....</h4>
                         </Col>
                         <Col lg={4} md={6} xs={12}>

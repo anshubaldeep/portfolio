@@ -1,0 +1,22 @@
+body{
+    &.dark-mode{
+        $highlight-color:#f39339;
+        $secondary-color: #895a25;
+        $section-color: #5e370c;
+        $text-color:#ffffff;
+        $bg-color:#272622;
+        $layout-color:#21201d;
+        $project-bg-color:transparent;
+        @import "theme";
+    }
+    &.light-mode{  
+        $highlight-color:#28166F;
+        $secondary-color:#5b566d;
+        $section-color:#18171d;
+        $text-color:#000000;
+        $bg-color:#FFFFFF;
+        $layout-color:#918aaf;
+        $project-bg-color:#28166F;
+        @import "theme";
+    }
+}

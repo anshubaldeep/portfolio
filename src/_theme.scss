@@ -1,12 +1,7 @@
 @import '~bootstrap/scss/bootstrap.scss';
 
 
-$highlight-color:#f39339;
-$secondary-color: #895a25;
-$section-color: #5e370c;
-$text-color:#ffffff;
-$bg-color:#272622;
-$layout-color:#21201d;
+
 
 html {
   scroll-behavior: smooth;
@@ -16,6 +11,10 @@ body{
   background-color: $layout-color;
   font-size: calc(10px + 2vmin);
   color: $text-color;
+}
+
+#root{
+    background-color: $layout-color;
 }
 
 ::-webkit-scrollbar {
@@ -66,13 +65,13 @@ body{
    margin-left: 3vw;
    border-radius: 0;
    .content{
-    color:#ffffff;
+    color:$text-color
    }
    .project-content{
     font-size: 0.8em;
   }
    .close{
-     color: #ffffff;
+     color: $text-color;
    }
    .close:hover{
     color: $highlight-color;
@@ -121,7 +120,7 @@ nav{
       font-weight: bold;
       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
       text-transform: uppercase;
-      font-size: 0.75em;
+      font-size: 1.15em;
     }
     .nav-link:hover{
       color: $highlight-color !important;
@@ -159,8 +158,9 @@ nav{
         padding-bottom: 0 !important;
         
     }
-    
-    
+}
+.navbar-toggler-icon{
+    color: $text-color !important;
 }
 
 .react-rotating-text-cursor {
@@ -255,7 +255,7 @@ nav{
     .card{
       height: 700px;
       background-color: $bg-color;
-      color: #ffffff;
+      color: $text-color;
       margin-right: 0px;
       border: solid 4px $highlight-color;
     }
@@ -288,10 +288,10 @@ nav{
     color: $section-color;
     position: absolute;
     right: -30px;
-    top: -41px;
+    top: -15px;
 }
     hr{
-      border: #ffffff 2px solid;
+      border:  2px solid;
       width:200px;
       margin-inline-start: 0em;
     }
@@ -301,10 +301,12 @@ nav{
     }
     .tilt-inner{
       font-size: 2rem;
+      color: #ffffff;
+      background-color: $project-bg-color;
       // transform: perspective(400px) translate3d(-400px,-200px,-800px);;
     }
     .card-img-overlay:hover,.card-img-overlay:active{
-      text-shadow: 0px 3px 20px #FFFFFF;
+      text-shadow: 0px 3px 20px ;
       box-shadow: 0px 3px 20px $highlight-color;
     }
   
@@ -396,6 +398,7 @@ nav{
   
   p{
     margin-bottom: 0px;
+    color: $text-color;
   }
   .footer-row{
     display: flex;
@@ -459,7 +462,7 @@ nav{
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: white;
+    color: $text-color;
   }
   
   .App-link {
