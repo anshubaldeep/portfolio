@@ -120,7 +120,7 @@ nav{
       font-weight: bold;
       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
       text-transform: uppercase;
-      font-size: 1.15em;
+      font-size: 0.75em;
     }
     .nav-link:hover{
       color: $highlight-color !important;
@@ -150,6 +150,7 @@ nav{
         height: 130px;
         margin-top: -30px !important;
         margin-bottom: -30px !important;
+        content: $logo !important;
     }
     
 
@@ -159,8 +160,11 @@ nav{
         
     }
 }
+.navbar-toggler{
+  border-color: $highlight-color !important;
+}
 .navbar-toggler-icon{
-    color: $text-color !important;
+    background-image: $navbarToggler !important;
 }
 
 .react-rotating-text-cursor {
@@ -191,10 +195,54 @@ nav{
     .name{
         color: $highlight-color;
     }
+    .rotating-text{
+      color: $highlight-color !important;
+    }
+    .custom-btn {
+      padding: 8px 25px;
+      font-weight: 650;
+      font-size: 0.75em;
+      background: transparent;
+      outline: none !important;
+      margin-top: 25px;
+      cursor: pointer;
+      color: $highlight-color;
+      transition: all 0.3s ease;
+      position: relative;
+      display: block;
+
+    }
+    .btn-custom {
+      border: 2px solid $highlight-color;
+      z-index: 1;
+    }
+    .btn-custom:after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 0;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background:$highlight-color;
+      transition: all 0.3s ease;
+    }
+    .btn-custom:hover {
+      color: white;
+    }
+    .btn-custom:hover:after {
+      top: auto;
+      bottom: 0;
+      height: 100%;
+    }
+    .btn-custom:active {
+      top: 2px;
+    }
     
     .img{
         width: 291px;
         height: 300px;
+        content: $avatar;
     }
     
     .text {
@@ -238,6 +286,9 @@ nav{
       height: 58px;
       margin-bottom: 1rem;
     }
+    .image-1{content:$sectionIcon1}
+    .image-2{content:$sectionIcon2}
+    .image-3{content:$sectionIcon3}
     .card-title{
       font-size: 1.25em;
       margin-top: 1em;
@@ -315,17 +366,22 @@ nav{
 
 
 .MyJourney{
-  background-color: #353430;
+  background-color: $myJourneyColor;
   margin-top: 100px;
   #myjourney{
     padding-top: 30px;
     margin-top: 30px;
   }
-  
+  .section-start{
+    color: white;
+  }
   .code-wrp {
     font-family: Roboto Mono,Courier New,Courier,monospace!important;
+    color: white;
     font-size: 20px;
     line-height: 1.6;
+    padding-left: 8px;
+    border-left: solid 4px $highlight-color;
     .code-l {
       z-index: 1;
       position: relative;
@@ -366,7 +422,7 @@ nav{
   .code-l::after {
     content: attr(data-line-nr);
     position: absolute;
-    left: -26px;
+    left: -49px;
     color: $secondary-color;
     font-family: Roboto Mono,Courier New,Courier,monospace!important;
     font-size: 19px;
@@ -376,7 +432,7 @@ nav{
     top: 0;
   }
     .code-l:hover:before {
-      background-color: $bg-color;
+      background-color: $myJourneyHighlight;
       top: 0;
       overflow-x: hidden;
       width: 300%;
@@ -398,7 +454,7 @@ nav{
   
   p{
     margin-bottom: 0px;
-    color: $text-color;
+    color: white;
   }
   .footer-row{
     display: flex;
@@ -420,7 +476,7 @@ nav{
     }
     a{
       font-size: 0.75em;
-      color:$highlight-color;
+      color: $footerIconColor;
     }
     
   }
@@ -436,6 +492,8 @@ nav{
   }
   .copyright{
     font-size: 0.5em;
+    margin-bottom: 0px !important;
+    padding-bottom: 20px;
   }
 }
 
@@ -481,9 +539,8 @@ nav{
 
   .timeline {
     width: 4px;
-    height: 300%;
-    left: 10px;
-    top: 8px;
+    height: 113vh;
+    left: 190px;
     z-index: 9;
     position: absolute;
     background-color: $highlight-color;
@@ -526,13 +583,21 @@ nav{
         .img{
         width: 241px;
         height: 255px;
+        margin-top: 15px;
         }
     }
     .custom-map-modal {
       overflow: auto; 
+      width: 97%;
       .modal-body{
         max-height: calc(100vh - 210px);
         overflow-y: auto;
+      }
+      .modal-content{
+        width: 94vw;
+        margin-left: 2.5vw;
+        padding-left: 2vw;
+        padding-right: 1vw;
       }
       .fullpage{
         overflow:none !important;
@@ -583,6 +648,7 @@ nav{
       font-size: 0.95em;
       .code-wrp {
         font-size: 19px;
+        padding-left: 8px;
       }
       
       .code-l::after {

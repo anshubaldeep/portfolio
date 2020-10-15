@@ -1,4 +1,47 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 0px;
+  }
+  ::-webkit-scrollbar-track {
+   &.dark-mode{
+    background: #21201d; 
+  }
+  &.light-mode{
+    background: #302853; 
+  }
+}
+
+
+
+ ::-webkit-scrollbar-thumb {
+    &.dark-mode{
+     background: #f39339; 
+   }
+   &.light-mode{
+     background: #170a4e; 
+   }
+ }
+
+ ::-webkit-scrollbar-thumb:hover {
+    &.dark-mode{
+     background: #f39339; 
+   }
+   &.light-mode{
+     background: #170a4e; 
+   }
+ }
+
+ 
+
+
+
 body{
+    font-size: calc(10px + 2vmin);
     &.dark-mode{
         $highlight-color:#f39339;
         $secondary-color: #895a25;
@@ -6,17 +49,36 @@ body{
         $text-color:#ffffff;
         $bg-color:#272622;
         $layout-color:#21201d;
+        $myJourneyColor:#353430;
+        $myJourneyHighlight:#272622;
+        $logo:url('./Assets/logo.png');
+        $footerIconColor: #f39339;
         $project-bg-color:transparent;
+        $navbarToggler:url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(243, 147, 57)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");      
+        $avatar:url("./Assets/Avatar.png");
+        $sectionIcon1:url("./Assets/section1-dark.png");
+        $sectionIcon2:url("./Assets/section2-dark.png");
+        $sectionIcon3:url("./Assets/section3-dark.png");
         @import "theme";
     }
     &.light-mode{  
-        $highlight-color:#28166F;
+        $highlight-color:#170a4e;
         $secondary-color:#5b566d;
         $section-color:#18171d;
         $text-color:#000000;
-        $bg-color:#FFFFFF;
-        $layout-color:#918aaf;
+        $bg-color:#fafafaea;
+        $layout-color:#111b4b;
+        $myJourneyColor:#2d334e;
+        $myJourneyHighlight:#0c1331;
+        $logo:url('./Assets/logo-light.png');
+        $footerIconColor: white;
         $project-bg-color:#28166F;
+        $navbarToggler:url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(23, 10, 78)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        $avatar:url("./Assets/Avatar-light.png");
+        $sectionIcon1:url("./Assets/section1-light.png");
+        $sectionIcon2:url("./Assets/section2-light.png");
+        $sectionIcon3:url("./Assets/section3-light.png");
         @import "theme";
     }
 }
+

@@ -3,6 +3,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import logo from '../../Assets/logo.png';
 import Scrollspy from 'react-scrollspy';
+import ThemeChanger from '../../Themes/ThemeChanger';
 
 
 const NavbarComponent=()=>{
@@ -66,6 +67,7 @@ const NavbarComponent=()=>{
           <Scrollspy items={ ['home', 'about', 'work','myjourney','contact'] } currentClassName="active-option">
           <Nav.Item><li><Nav.Link className='' href='#home'>Start/&gt;</Nav.Link></li> </Nav.Item>
           {nav}
+          <Nav.Item><li><Nav.Link className=''><ThemeChanger/></Nav.Link></li> </Nav.Item>
           </Scrollspy>
           </Nav>
           

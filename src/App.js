@@ -6,7 +6,7 @@ import Aux from './hoc/hoc';
 import WorkSection from './Sections/Work/Work';
 import MyJourneySection from './Sections/MyJourney/MyJourney';
 import AboutSection from './Sections/About/About';
-import ThemeChanger from './Themes/ThemeChanger';
+
 
 
 
@@ -17,7 +17,6 @@ function App() {
           <Aux>
           <header className="App-header">
             <Jumbotron />
-            <ThemeChanger/>
             <AboutSection />
             <WorkSection /> 
             <MyJourneySection/>

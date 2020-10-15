@@ -45,7 +45,7 @@ const AboutSection=()=>{
       <Col md={4} xs={12} className='text-center section-card' key={index}>
         <Card className={`w-100 ${sec.pos}`}>
         <Card.Body>
-        <img src={sec.image} alt='section-img' className='section-img'/>
+        <img src={sec.image} alt='section-img' className={`section-img image-${index+1}`}/>
         <Card.Title>{sec.name}{index>0?' Developer':''}</Card.Title>
         <Card.Subtitle className="mb-2">{sec.description}</Card.Subtitle>
         <Card.Text>
