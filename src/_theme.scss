@@ -449,6 +449,42 @@ nav{
 }
 }
 
+
+
+
+
+.Contact{
+  .card{
+    background-color: $layout-color;
+    color: white;
+    margin-top: 150px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+  }
+  p{
+    font-size: 0.75em;
+  }
+  .btn-primary{
+    background-color: transparent;
+    font-size: 0.75em;
+    padding-top: 0.35em;
+    padding-bottom: 0.35em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    border-radius: 290486px;
+    border: solid 2px $card-button-color;
+  }
+  .btn-primary:hover{
+    background-color: $card-button-color;
+    color: $text-color;
+  }
+}
+
+
+
 .Footer{
   background-color: $layout-color;
   
@@ -654,11 +690,17 @@ nav{
       .code-l::after {
         
         font-size: 17px !important;
-        
+        left:-39px !important;
       }
       .dot {
         display: none !important;
     }
+    }
+
+    .Contact{
+      .btn-primary{
+        font-size: 1em;
+      }
     }
 
     .Footer{

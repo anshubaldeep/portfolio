@@ -44,9 +44,9 @@ const WorkSection=()=>{
                 alt:'Project ',
                 description:'lorem ipsum fbvdbdfdbd11111',
                 modalShow:false,
-                link:'https://anshubaldeep.github.io/Lex-Bolster/index.html',
+                link:'http://lexbolster.com',
                 techStack:['html','css','javaScript'],
-                fpScreenshot:require('../../Assets/projects/fp_screenshots/lex_bolster.png')
+                fpScreenshot:require('../../Assets/projects/fp_screenshots/lex-bolster.png')
             },
         
             {
@@ -63,27 +63,27 @@ const WorkSection=()=>{
         
             {
                 id:5,
-                name:'Project ',
-                path:require('../../Assets/logo.png'),
+                name:'Burger Builder',
+                path:require('../../Assets/projects/thumbnails/Burger-builder.jpg'),
                 alt:'Project ',
                 description:'lorem ipsum 55555',
                 modalShow:false,
                 link:'',
                 techStack:['html','css','javaScript'],
-                // fpScreenshot:require('../../Assets/projects/fp_screenshots')
+                fpScreenshot:require('../../Assets/projects/fp_screenshots/burger-builder.jpg')
             },
         
-            {
-                id:6,
-                name:'Project ',
-                path:require('../../Assets/logo.png'),
-                alt:'Project ',
-                description:'lorem ipsum 66666',
-                modalShow:false,
-                link:'',
-                techStack:['html','css','javaScript'],
-                // fpScreenshot:require('../../Assets/projects/fp_screenshots')
-            },
+            // {
+            //     id:6,
+            //     name:'Project ',
+            //     path:require('../../Assets/logo.png'),
+            //     alt:'Project ',
+            //     description:'lorem ipsum 66666',
+            //     modalShow:false,
+            //     link:'',
+            //     techStack:['html','css','javaScript'],
+            //     // fpScreenshot:require('../../Assets/projects/fp_screenshots')
+            // },
         ]);
 
         const handleClose =(id)=>{

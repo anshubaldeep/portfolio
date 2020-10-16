@@ -6,6 +6,7 @@ import Aux from './hoc/hoc';
 import WorkSection from './Sections/Work/Work';
 import MyJourneySection from './Sections/MyJourney/MyJourney';
 import AboutSection from './Sections/About/About';
+import ContactSection from './Sections/Contact/Contact';
 
 
 
@@ -20,6 +21,7 @@ function App() {
             <AboutSection />
             <WorkSection /> 
             <MyJourneySection/>
+            <ContactSection/>
           </header>
           </Aux>
         </Layout>

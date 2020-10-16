@@ -56,6 +56,7 @@ body{
         $project-bg-color:transparent;
         $navbarToggler:url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(243, 147, 57)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");      
         $avatar:url("./Assets/Avatar.png");
+        $card-button-color:#f39339;
         $sectionIcon1:url("./Assets/section1-dark.png");
         $sectionIcon2:url("./Assets/section2-dark.png");
         $sectionIcon3:url("./Assets/section3-dark.png");
@@ -75,6 +76,7 @@ body{
         $project-bg-color:#28166F;
         $navbarToggler:url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(23, 10, 78)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
         $avatar:url("./Assets/Avatar-light.png");
+        $card-button-color:white;
         $sectionIcon1:url("./Assets/section1-light.png");
         $sectionIcon2:url("./Assets/section2-light.png");
         $sectionIcon3:url("./Assets/section3-light.png");

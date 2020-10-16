@@ -73,7 +73,7 @@ const AboutSection=()=>{
               <p className='section-start mt-5'>About Me/&gt;</p><br/>
                 <h1>Hello! I'm Baldeep. Nice to meet you.</h1>
                 <p>I am a budding software developer who loves to create and is not afraid to take up new challenges. I like to develop websites, web-apps and mobile apps.
-                    I'm quietly confident, naturally curious, and perpetually working on improving my chops one design problem at a time.
+                   <span className='d-none d-sm-none d-md-block'> I'm quietly confident, naturally curious, and perpetually working on improving my chops one design problem at a time.</span>
                 </p>
               </Col>
             </Row>
