@@ -4,11 +4,13 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
+import Coffee from '../../Assets/coffee.png';
 
 
 const ContactSection=()=>{
         return(
-            <Container className='Contact' id='contact'>
+            <Container className='Contact text-center' id='contact'>
+            <img src={Coffee} alt='Contact-me' className='img img-responsive'></img>
             <Card>
                 <Card.Body>
                     <Row>
