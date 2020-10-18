@@ -160,6 +160,34 @@ nav{
         
     }
 }
+.theme-toggle.react-toggle--checked .react-toggle-track {
+  background-color: #4D4D4D !important;
+}
+.react-toggle .react-toggle-thumb{
+  border-color: $highlight-color;
+}
+.fa-moon{
+  color: $highlight-color;
+  font-size: 0.8em;
+  position: relative;
+  bottom: 2.5px;
+  right: 2px;
+}
+.fa-sun{
+  position: relative;
+  bottom: 3px;
+  right: 4px;
+  color: yellow;
+  font-size: 0.8em;
+}
+.theme-toggle.react-toggle--checked .react-toggle-track:hover {
+  background-color: red;
+}
+.theme-toggle.react-toggle .react-toggle-track{
+  background-color:rgb(93, 201, 236);
+  color: yellow;
+  font-size: 0.85em;
+}
 .navbar-toggler{
   border-color: $highlight-color !important;
 }

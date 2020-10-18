@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import DarkModeToggle from "react-dark-mode-toggle";
+//import DarkModeToggle from "react-dark-mode-toggle";
+import Toggle from 'react-toggle';
+import { FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faMoon,faSun} from '@fortawesome/free-solid-svg-icons';
+import "react-toggle/style.css" 
 
 
 const ThemeChanger = () => {
@@ -13,27 +17,36 @@ const ThemeChanger = () => {
       localStorage.setItem('Theme', 'dark');
       document.body.classList.add('dark-mode');
       document.body.classList.remove('light-mode');
+      //setThemeState(true);
     } else {
       setDarkMode(false);
       localStorage.setItem('Theme', 'light');
       document.body.classList.remove('dark-mode');
       document.body.classList.add('light-mode');
+      //setThemeState(false);
     }
   }
+  
   useEffect(() => {
     const getTheme = localStorage.getItem('Theme');
-    if(!getTheme) return document.body.classList.add('dark-mode');
-    if (getTheme === 'dark') return  document.body.classList.add('dark-mode');
-    if (getTheme === 'light') return  document.body.classList.add('light-mode');
-  })
+    if(!getTheme) {setDarkMode(true); return document.body.classList.add('dark-mode'); }
+    if (getTheme === 'dark') {setDarkMode(true); return  document.body.classList.add('dark-mode');} 
+    if (getTheme === 'light') {setDarkMode(false); return  document.body.classList.add('light-mode');} 
+  },[])
+  
   return (
-    <div>
-      <DarkModeToggle
-      onChange={handleChange}
-      checked={darkMode}
-      size={50}
-    />
-      {/* <button onClick={handleChange}>{themeState ? 'Light Mode' : 'Dark Mode'}</button> */}
+    <div className='text-center'>
+       <Toggle
+        checked={darkMode}
+        //defaultChecked={defaultTheme}
+        aria-label='No label tag'
+        onChange={handleChange} 
+         icons={{
+            checked: <FontAwesomeIcon icon={faMoon} />,
+            unchecked: <FontAwesomeIcon icon={faSun} />,
+         }}
+         className='theme-toggle'
+        /> 
     </div>
   )
 }
