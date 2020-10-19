@@ -101,6 +101,44 @@ body{
 }
 }
 
+.contact-modal{
+  .modal-content{
+    min-height: 90vh;
+    min-width: 70vw;
+    margin-left: 15vw;
+    margin-right: 15vw;
+  }
+  .form-group{
+    margin-top: 20px;
+    color: $highlight-color;
+  }
+  .form-control{
+    background-color: transparent;
+    border: solid 2px $highlight-color;
+  }
+  .form-control::placeholder{
+    color: $secondary-color;
+  }
+  
+  .text-center{
+    margin-left: 28.5vw !important;
+    margin-right: 20vw !important;
+    margin-top: 30px !important;
+    background-color: transparent !important;
+    color: $highlight-color;
+    font-size: 0.75em;
+    padding-top: 0.35em;
+    padding-bottom: 0.35em;
+    width: 150px !important;
+    border-radius: 290486px;
+    border: solid 2px $highlight-color;
+  }
+  .text-center:hover{
+    background-color:$highlight-color !important;
+    color:white;
+  }
+}
+
 
 .active-navbar {
   visibility: visible;
@@ -170,12 +208,12 @@ nav{
   color: $highlight-color;
   font-size: 0.8em;
   position: relative;
-  bottom: 2.5px;
+  bottom: 1px;
   right: 2px;
 }
 .fa-sun{
   position: relative;
-  bottom: 3px;
+  bottom: 2px;
   right: 4px;
   color: yellow;
   font-size: 0.8em;
