@@ -102,6 +102,11 @@ body{
 }
 
 .contact-modal{
+  svg{
+    position: relative;
+    bottom: 4px;
+    padding-left: 10px;
+  }
   .modal-content{
     min-height: 90vh;
     min-width: 70vw;
@@ -115,12 +120,50 @@ body{
   .form-control{
     background-color: transparent;
     border: solid 2px $highlight-color;
+    color: $text-color !important;
   }
   .form-control::placeholder{
     color: $secondary-color;
   }
+  .custom-select{
+    background: none;
+    border: none;
+    font-size: null;
+    color: $highlight-color;
+    padding: 0px;
+  }
+  .custom-select:after {
+    content: '<>';
+    font: 15px "Consolas", monospace;
+    background-color: transparent;
+    background: none !important;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    //float: right;
+    //display: inline;
+    right: 10px;
+    bottom: 10px;
+    /*Adjust for position however you want*/
+    
+    
+    //padding: 0 0 2px;
+    
+    /*left line */
+    
+    position: absolute;
+    pointer-events: none;
+  }
   
-  .text-center{
+.custom-select select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Add some styling */
+}
+  
+  .submit-btn{
     margin-left: 28.5vw !important;
     margin-right: 20vw !important;
     margin-top: 30px !important;
@@ -133,7 +176,7 @@ body{
     border-radius: 290486px;
     border: solid 2px $highlight-color;
   }
-  .text-center:hover{
+  .submit-btn:hover{
     background-color:$highlight-color !important;
     color:white;
   }
@@ -717,6 +760,15 @@ nav{
         max-height: 100vh;
       }
     }
+
+    .contact-modal{
+      .modal-content{
+        min-width: 94vw;
+      }
+    }
+
+
+
 
     .About{
       .section-card{

@@ -4,13 +4,16 @@ import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
+import { FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faPaperPlane} from '@fortawesome/free-solid-svg-icons';
+
 
 const contactModal=(props)=>{
         return(
             <Container className='justify-content-center'>      
             <Modal show={props.show} onHide={props.Close} className='custom-map-modal contact-modal' variant="dark" centered>
             <Modal.Header closeButton>
-              <Modal.Title >Contact Me</Modal.Title>
+              <Modal.Title >Contact Me <FontAwesomeIcon icon={faPaperPlane} size="md"/></Modal.Title>
             </Modal.Header>
             <Modal.Body className="justify-content-center">
             <Form>
@@ -37,6 +40,7 @@ const contactModal=(props)=>{
               <Form.Row>
               <Form.Group as={Col} sm="12" controlId="formGridState">
                 <Form.Label>Type of Project</Form.Label>
+                <div className='custom-select'>
                     <Form.Control as="select" placeholder="Choose...">
                           <option></option>
                           <option>Front-End</option>
@@ -45,6 +49,7 @@ const contactModal=(props)=>{
                           <option>Mobile App</option>
                           <option>Prototyping</option>
                     </Form.Control>
+                    </div>
                 </Form.Group>
               </Form.Row>
               <Form.Row>
@@ -54,7 +59,7 @@ const contactModal=(props)=>{
                     </Form.Control>
                 </Form.Group>
               </Form.Row>
-              <Button type="submit" size="lg" block className='text-center'>Submit form</Button>
+              <Button type="submit" size="lg" block className='submit-btn'>Submit form</Button>
             </Form>
             </Modal.Body>
             <Modal.Footer>
