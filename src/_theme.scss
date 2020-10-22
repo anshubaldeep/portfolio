@@ -162,6 +162,9 @@ body{
   appearance: none;
   /* Add some styling */
 }
+  option{
+    color: black;
+  }
   
   .submit-btn{
     margin-left: 28.5vw !important;
@@ -308,7 +311,12 @@ nav{
       color: $highlight-color !important;
     }
     .custom-btn {
-      padding: 8px 25px;
+      font-size: 0.75em;
+      padding-top: 0.35em;
+      padding-bottom: 0.35em;
+      padding-left: 1.5em;
+      padding-right: 1.5em;
+      border-radius: 290486px;
       font-weight: 650;
       font-size: 0.75em;
       background: transparent;
@@ -334,6 +342,7 @@ nav{
       left: 0;
       z-index: -1;
       background:$highlight-color;
+      border-radius: 290486px;
       transition: all 0.3s ease;
     }
     .btn-custom:hover {
@@ -413,11 +422,15 @@ nav{
       margin-bottom: 1.85rem;
     }
     .card{
-      height: 700px;
+      height: 650px;
       background-color: $bg-color;
       color: $text-color;
       margin-right: 0px;
       border: solid 4px $highlight-color;
+    }
+    li{
+      margin-top: 2.5px;
+      margin-bottom: 2.5px;
     }
     .start{
       border-radius: 15px 0px 0px 15px;
@@ -599,7 +612,32 @@ nav{
   }
 }
 
-
+.Success{
+  padding-top: 150px;
+  color: $text-color;
+  font-size: 1.25em;
+  background-color: $bg-color;
+  img{
+    
+    height: 200px;
+  }
+  .btn-primary{
+    background-color: transparent;
+    font-size: 0.75em;
+    padding-top: 0.35em;
+    padding-bottom: 0.35em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    margin-top: 1em;
+    border-radius: 290486px;
+    color: $text-color;
+    border: solid 2px $highlight-color;
+  }
+  .btn-primary:hover{
+    background-color: $highlight-color;
+    color: white;
+  }
+}
 
 .Footer{
   background-color: $layout-color;
@@ -830,6 +868,13 @@ nav{
       }
       .btn-primary{
         font-size: 1em;
+      }
+    }
+
+    .Success{
+      img{
+        margin-top: 70px;
+        height: 130px;
       }
     }
 

@@ -25,7 +25,7 @@ const ContactSection=(props)=>{
                         </Col>
 
                         <Col sm={12} lg={4} className='mt-3 mb-2 text-center'>
-                            <Button onClick={props.showModal}>Let's do this</Button>
+                            <Button onClick={props.showModal} className='btn-custom'>Let's do this</Button>
                         </Col>
                     </Row>
                 </Card.Body>
