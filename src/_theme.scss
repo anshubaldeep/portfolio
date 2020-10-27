@@ -113,6 +113,10 @@ body{
     min-width: 70vw;
     margin-left: 15vw;
     margin-right: 15vw;
+    .btn-primary{
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
   }
   .form-group{
     margin-top: 20px;
@@ -423,7 +427,7 @@ nav{
       margin-bottom: 1.85rem;
     }
     .card{
-      height: 650px;
+      height: 680px;
       background-color: $bg-color;
       color: $text-color;
       margin-right: 0px;
@@ -787,8 +791,15 @@ nav{
         margin-left: 2.5vw;
         padding-left: 2vw;
         padding-right: 1vw;
+        .content{
+          min-height: 13em;
+          max-height: 20em;
+        }
         .btn-primary{
-          margin-top: 0px;
+          margin-top: 10px;
+        }
+        .advisory{
+          color: $text-color;
         }
       }
       .fullpage{
@@ -804,6 +815,10 @@ nav{
     .contact-modal{
       .modal-content{
         min-width: 94vw;
+        .btn-primary{
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
       }
     }
 

@@ -68,7 +68,9 @@ const ContactModal=(props)=>{
                     </Form.Control>
                 </Form.Group>
               </Form.Row>
+              <Form.Row className='text-center'>
               <Button type="submit" value="Submit" size="lg" block className='submit-btn'>Submit form</Button>
+              </Form.Row>
               <Form.Control type="text" name="honeypot" style={{display:'none'}} />
               <Form.Control type="hidden" name="accessKey" value="af947b53-2b26-41c9-9cb1-fc5d9004ef41"/>
               <Form.Control type="hidden" name="subject" value={`${queryType} Query from portfolio by ${name} - ${email}`}/>

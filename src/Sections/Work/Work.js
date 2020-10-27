@@ -125,7 +125,7 @@ const WorkSection=()=>{
                                 <Col xs={12} md={3} className='overflow-auto project-content'>
                                     <p><span className='heading'>Technology Stack:</span><br/> <span className='content'>{proj.techStack.map(i=>('#'+i+' '))}</span></p>
                                     <p className='mt-5'><span className='heading'>Description:</span><br/><p className='mt-2 content overflow-auto'>{proj.description}</p></p>
-                                    <p className='mt-2 mb-1 d-sm-block d-md-none'>*Please scroll down to view Project Screenshots</p>
+                                    <p className='mt-2 mb-1 advisory d-sm-block d-md-none'>*Please scroll down to view Project Screenshots</p>
                                     <br/>
                                     
                                         {proj.link.length > 0 &&
