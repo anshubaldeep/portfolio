@@ -11,6 +11,7 @@ import {faPaperPlane} from '@fortawesome/free-solid-svg-icons';
 const ContactModal=(props)=>{
         const [name,setName]= useState(null);
         const [email,setEmail]= useState(null);
+        const [queryType,setQueryType]= useState(null);
         
 
         return(
@@ -49,7 +50,7 @@ const ContactModal=(props)=>{
               <Form.Group as={Col} sm="12" controlId="formGridState">
                 <Form.Label>Type of Project</Form.Label>
                 <div className='custom-select'>
-                    <Form.Control as="select" placeholder="Choose..." type="text" name="$QueryType">
+                    <Form.Control as="select" placeholder="Choose..." type="text" name="$QueryType" onChange={event=>setQueryType(event.target.value)}>
                           <option></option>
                           <option>Front-End</option>
                           <option>Back-End</option>
@@ -70,7 +71,7 @@ const ContactModal=(props)=>{
               <Button type="submit" value="Submit" size="lg" block className='submit-btn'>Submit form</Button>
               <Form.Control type="text" name="honeypot" style={{display:'none'}} />
               <Form.Control type="hidden" name="accessKey" value="af947b53-2b26-41c9-9cb1-fc5d9004ef41"/>
-              <Form.Control type="hidden" name="subject" value={`Query from portfolio by ${name} - ${email}`}/>
+              <Form.Control type="hidden" name="subject" value={`${queryType} Query from portfolio by ${name} - ${email}`}/>
               <Form.Control type="hidden" name="redirectTo" value="http://localhost:3000/Success"/>
             </Form>
             </Modal.Body>

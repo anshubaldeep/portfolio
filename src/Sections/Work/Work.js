@@ -17,11 +17,11 @@ const WorkSection=()=>{
                 id:1,
                 name:'Warehouse Management App ',
                 path:require('../../Assets/projects/thumbnails/Warehouse-management.jpg'),
-                alt:'Project ',
-                description:'lorem ipsum 222222',
+                alt:'Warehouse Management App ',
+                description:'This application is used to manage the data of a warehouse. Along with keeping track of various products present in the warehouse, it also provides the ability to add photos and description to the products by looking up for the project using their barcodes. Proper roles and authentication is provided to allow only Photographers to add photos and content writers to add content. Also the warehouse manager can populate the data for the warehouse using csvs for the bills.',
                 modalShow:false,
                 link:'http://warehousemanage.herokuapp.com/',
-                techStack:['html','css','javaScript'],
+                techStack:['html','css','javaScript', 'Django', 'OCR-Scanning', 'SQL'],
                 fpScreenshot:require('../../Assets/projects/fp_screenshots/warehouse-management.jpg')
             },
         
@@ -29,11 +29,11 @@ const WorkSection=()=>{
                 id:2,
                 name:'Rescue Maps ',
                 path:require('../../Assets/projects/thumbnails/Rescue-maps.jpg'),
-                alt:'Project ',
-                description:'lorem ipsum 3333333',
+                alt:'Rescue Maps ',
+                description:'This project was made for the theme of disaster management. It provides live flood tracking using rain data and on the basis of this data categorizes areas as safe,moderate and dangerous. Also provides rescue organizations with an interface to setup a rescue camp and provide its various details like capacity, no of available beds along with their geographical location of the map in it. Also these organizations can have an idea of population in a particular location using heat maps to showcase the same. It also has an interface for the people who need to be rescued. They can look for the various camps and register their families by clicking on a camp and its capacity. Also they can provide feedback for their registered camps.',
                 modalShow:false,
-                link:'',
-                techStack:['html','css','javaScript'],
+                link:'http://rescue-maps.herokuapp.com/',
+                techStack:['html','css','javaScript','Django','D3'],
                 fpScreenshot:require('../../Assets/projects/fp_screenshots/rescue-maps.jpg')
             },
 
@@ -41,11 +41,11 @@ const WorkSection=()=>{
                 id:3,
                 name:'Lex Bolster ',
                 path:require('../../Assets/projects/thumbnails/Lex-bolster.jpg'),
-                alt:'Project ',
-                description:'lorem ipsum fbvdbdfdbd11111',
+                alt:'Lex Bolster ',
+                description:'A modern and refreshing cover page for a multi-functional firm which operates in law, educational trainings, among many other services. Developed using serverless backend services. Designed using modern aesthetic and minimalistic design principles.',
                 modalShow:false,
                 link:'http://lexbolster.com',
-                techStack:['html','css','javaScript'],
+                techStack:['html','css','javaScript','Amazon-SES&Lambda'],
                 fpScreenshot:require('../../Assets/projects/fp_screenshots/lex-bolster.png')
             },
         
@@ -53,11 +53,11 @@ const WorkSection=()=>{
                 id:4,
                 name:'Examination Mangement System ',
                 path:require('../../Assets/projects/thumbnails/Examination-management.png'),
-                alt:'Project ',
-                description:'lorem ipsum 44444',
+                alt:'Examination Mangement System ',
+                description:'Built as a complete system to store and transport the examination files with the maximum security. Workflow with Examination controller, teachers and publishers. 3 Teachers set the exam and these are stored in a distributed DMS called IPFS. Index keys for files then generated from here stored in private blockchain called Hyperledger, only viewable by Superintendent of examination 1 hour before examination as part of Smart Contract. One pf the keys then accessible sent to publisher 1 hour brfore exam and the exam file accessible on that day. Also AES encryption while sending files between the roles applied for extra security.',
                 modalShow:false,
                 link:'',
-                techStack:['html','css','javaScript'],
+                techStack:['html','css','javaScript', 'Django','SQL','BlockChain','Hyperledger'],
                 fpScreenshot:require('../../Assets/projects/fp_screenshots/Examination-management.jpg')
             },
         
@@ -65,11 +65,11 @@ const WorkSection=()=>{
                 id:5,
                 name:'Burger Builder',
                 path:require('../../Assets/projects/thumbnails/Burger-builder.jpg'),
-                alt:'Project ',
-                description:'lorem ipsum 55555',
+                alt:'Burger Builder ',
+                description:'A simple application with React using React hooks, CSS Modules and Google firebase for backend. It also has authentication provided by Google Firebase and tracks orders sent by the users.',
                 modalShow:false,
                 link:'',
-                techStack:['html','css','javaScript'],
+                techStack:['html','css','javaScript','ReactJS','CSS-Modules','Google-Firebase','NoSQL'],
                 fpScreenshot:require('../../Assets/projects/fp_screenshots/burger-builder.jpg')
             },
         
@@ -124,7 +124,8 @@ const WorkSection=()=>{
                                 </Col>
                                 <Col xs={12} md={3} className='overflow-auto project-content'>
                                     <p><span className='heading'>Technology Stack:</span><br/> <span className='content'>{proj.techStack.map(i=>('#'+i+' '))}</span></p>
-                                    <p className='mt-5'><span className='heading'>Description:</span><br/><span className='content'>{proj.description}</span></p>
+                                    <p className='mt-5'><span className='heading'>Description:</span><br/><p className='mt-2 content overflow-auto'>{proj.description}</p></p>
+                                    <p className='mt-2 mb-1 d-sm-block d-md-none'>*Please scroll down to view Project Screenshots</p>
                                     <br/>
                                     
                                         {proj.link.length > 0 &&
