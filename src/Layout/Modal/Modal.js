@@ -74,7 +74,7 @@ const ContactModal=(props)=>{
               <Form.Control type="text" name="honeypot" style={{display:'none'}} />
               <Form.Control type="hidden" name="accessKey" value="af947b53-2b26-41c9-9cb1-fc5d9004ef41"/>
               <Form.Control type="hidden" name="subject" value={`${queryType} Query from portfolio by ${name} - ${email}`}/>
-              <Form.Control type="hidden" name="redirectTo" value="http://localhost:3000/Success"/>
+              <Form.Control type="hidden" name="redirectTo" value="https://baldeep-singh.netlify.app/success"/>
             </Form>
             </Modal.Body>
             <Modal.Footer>
