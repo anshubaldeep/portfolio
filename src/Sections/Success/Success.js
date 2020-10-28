@@ -2,7 +2,7 @@ import React from 'react';
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
-import Jumbotron from "react-bootstrap/jumbotron";
+import Jumbotron from "react-bootstrap/Jumbotron";
 import SuccessImg from '../../Assets/success.png';
 import Button from "react-bootstrap/Button";
 import { FontAwesomeIcon} from '@fortawesome/react-fontawesome';

@@ -66,10 +66,10 @@ const WorkSection=()=>{
                 name:'Burger Builder',
                 path:require('../../Assets/projects/thumbnails/Burger-builder.jpg'),
                 alt:'Burger Builder ',
-                description:'A simple application with React using React hooks, CSS Modules and Google firebase for backend. It also has authentication provided by Google Firebase and tracks orders sent by the users.',
+                description:'A simple application with React using React hooks, Redux, CSS Modules and Google firebase for backend. It also has authentication provided by Google Firebase and tracks orders sent by the users.',
                 modalShow:false,
-                link:'',
-                techStack:['html','css','javaScript','ReactJS','CSS-Modules','Google-Firebase','NoSQL'],
+                link:'https://burger-builder-bscode.netlify.app/',
+                techStack:['html','css','javaScript','ReactJS','Redux', 'npm','CSS-Modules','Google-Firebase','NoSQL'],
                 fpScreenshot:require('../../Assets/projects/fp_screenshots/burger-builder.jpg')
             },
         
@@ -123,7 +123,7 @@ const WorkSection=()=>{
                                     </div>
                                 </Col>
                                 <Col xs={12} md={3} className='overflow-auto project-content'>
-                                    <p><span className='heading'>Technology Stack:</span><br/> <span className='content'>{proj.techStack.map(i=>('#'+i+' '))}</span></p>
+                                    <p><span className='heading'>Technology Stack:</span><br/> <span className='content'>{proj.techStack.map(i=>('#'+i+'  '))}</span></p>
                                     <p className='mt-5'><span className='heading'>Description:</span><br/><p className='mt-2 content overflow-auto'>{proj.description}</p></p>
                                     <p className='mt-2 mb-1 advisory d-sm-block d-md-none'>*Please scroll down to view Project Screenshots</p>
                                     <br/>
