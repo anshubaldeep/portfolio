@@ -18,7 +18,7 @@ const WorkSection=()=>{
                 name:'Warehouse Management App ',
                 path:require('../../Assets/projects/thumbnails/Warehouse-management.jpg'),
                 alt:'Warehouse Management App ',
-                description:'This application is used to manage the data of a warehouse. Along with keeping track of various products present in the warehouse, it also provides the ability to add photos and description to the products by looking up for the project using their barcodes. Proper roles and authentication is provided to allow only Photographers to add photos and content writers to add content. Also the warehouse manager can populate the data for the warehouse using csvs for the bills.',
+                description:'This application is used to manage the data of a warehouse. Keeping track of various products present in the warehouse. Ability to add photos and description for products. Products can be looked up using their barcodes. Proper roles and authentication provided. Allow only Photographers to add photos and content writers to add content. Can populate the data for the warehouse using csvs for the bills',
                 modalShow:false,
                 link:'http://warehousemanage.herokuapp.com/',
                 techStack:['html','css','javaScript', 'Django', 'OCR-Scanning', 'SQL'],
@@ -30,7 +30,7 @@ const WorkSection=()=>{
                 name:'Rescue Maps ',
                 path:require('../../Assets/projects/thumbnails/Rescue-maps.jpg'),
                 alt:'Rescue Maps ',
-                description:'This project was made for the theme of disaster management. It provides live flood tracking using rain data and on the basis of this data categorizes areas as safe,moderate and dangerous. Also provides rescue organizations with an interface to setup a rescue camp and provide its various details like capacity, no of available beds along with their geographical location of the map in it. Also these organizations can have an idea of population in a particular location using heat maps to showcase the same. It also has an interface for the people who need to be rescued. They can look for the various camps and register their families by clicking on a camp and its capacity. Also they can provide feedback for their registered camps.',
+                description:'Project made for the theme of disaster management. Provides live flood tracking using rain data . Categorizes areas as safe,moderate and dangerous based on data. Provides rescue organizations with an interface to setup a rescue camps and provide its various details like capacity, no of available beds along with their geographical location of the map. Organizations can get idea of population in a particular location using heat maps. Has an interface for the people who need to be rescued. They can look for the various camps and register their families by clicking on a camp and its capacity. Can also provide feedback for their registered camps',
                 modalShow:false,
                 link:'http://rescue-maps.herokuapp.com/',
                 techStack:['html','css','javaScript','Django','D3'],
@@ -42,7 +42,7 @@ const WorkSection=()=>{
                 name:'Lex Bolster ',
                 path:require('../../Assets/projects/thumbnails/Lex-bolster.jpg'),
                 alt:'Lex Bolster ',
-                description:'A modern and refreshing cover page for a multi-functional firm which operates in law, educational trainings, among many other services. Developed using serverless backend services. Designed using modern aesthetic and minimalistic design principles.',
+                description:'A modern and refreshing cover page for a multi-functional firm which operates in law, educational trainings, among many other services. Developed using serverless backend services. Designed using modern aesthetic and minimalistic design principles',
                 modalShow:false,
                 link:'http://lexbolster.com',
                 techStack:['html','css','javaScript','Amazon-SES&Lambda'],
@@ -54,7 +54,7 @@ const WorkSection=()=>{
                 name:'Examination Mangement System ',
                 path:require('../../Assets/projects/thumbnails/Examination-management.png'),
                 alt:'Examination Mangement System ',
-                description:'Built as a complete system to store and transport the examination files with the maximum security. Workflow with Examination controller, teachers and publishers. 3 Teachers set the exam and these are stored in a distributed DMS called IPFS. Index keys for files then generated from here stored in private blockchain called Hyperledger, only viewable by Superintendent of examination 1 hour before examination as part of Smart Contract. One pf the keys then accessible sent to publisher 1 hour brfore exam and the exam file accessible on that day. Also AES encryption while sending files between the roles applied for extra security.',
+                description:'Built as a complete system to store and transport the examination files with the maximum security. Workflow with Examination controller, teachers and publishers. Teachers set exam and files for exams stored in distributed DMS called IPFS. Index keys for files then generated in IPFS stored in private blockchain called Hyperledger. Only viewable by Superintendent of examination 1 hour before examination as part of Smart Contract. One of the keys then accessible sent to publisher 1 hour before exam. Exam file accessible only on that day. Also AES encryption while sending files between the roles applied for extra security',
                 modalShow:false,
                 link:'',
                 techStack:['html','css','javaScript', 'Django','SQL','BlockChain','Hyperledger'],
@@ -66,7 +66,7 @@ const WorkSection=()=>{
                 name:'Burger Builder',
                 path:require('../../Assets/projects/thumbnails/Burger-builder.jpg'),
                 alt:'Burger Builder ',
-                description:'A simple application with React using React hooks, Redux, CSS Modules and Google firebase for backend. It also has authentication provided by Google Firebase and tracks orders sent by the users.',
+                description:'A simple application with React using React hooks, CSS Modules and Google firebase for backend. Has authentication provided by Google Firebase. Tracks orders sent by the users',
                 modalShow:false,
                 link:'https://burger-builder-bscode.netlify.app/',
                 techStack:['html','css','javaScript','ReactJS','Redux', 'npm','CSS-Modules','Google-Firebase','NoSQL'],
@@ -122,14 +122,14 @@ const WorkSection=()=>{
                                         <img className='img img-responsive w-100' src={proj.fpScreenshot} alt={proj.alt}></img>
                                     </div>
                                 </Col>
-                                <Col xs={12} md={3} className='overflow-auto project-content'>
+                                <Col xs={12} md={3} className='overflow-hidden project-content'>
                                     <p><span className='heading'>Technology Stack:</span><br/> <span className='content'>{proj.techStack.map(i=>('#'+i+'  '))}</span></p>
-                                    <p className='mt-5'><span className='heading'>Description:</span><br/><p className='mt-2 content overflow-auto'>{proj.description}</p></p>
+                                    <p className='mt-5'><span className='heading'>Description:</span><br/><p className='mt-2 content overflow-auto'><ul>{proj.description.split('.').map(i=><li>{i}</li>)}</ul></p></p>
                                     <p className='mt-2 mb-1 advisory d-sm-block d-md-none'>*Please scroll down to view Project Screenshots</p>
                                     <br/>
                                     
                                         {proj.link.length > 0 &&
-                                                <Button variant='primary' href={proj.link} target='_blank'>VISIT</Button>   
+                                                <Button variant='primary' className='visit-btn' href={proj.link} target='_blank'>VISIT</Button>   
                                         }
                                     
                                 </Col>

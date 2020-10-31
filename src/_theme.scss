@@ -66,8 +66,11 @@ body{
    border-radius: 0;
    .content{
     color:$text-color;
-    max-height: 13em;
+    max-height: 14em;
    }
+   li{
+    margin-top: 0.35em;
+  }
    .project-content{
     font-size: 0.8em;
   }
@@ -794,6 +797,9 @@ nav{
         .content{
           min-height: 13em;
           max-height: 20em;
+        }
+        .visit-btn{
+          margin-bottom: 2rem;
         }
         .btn-primary{
           margin-top: 10px;
