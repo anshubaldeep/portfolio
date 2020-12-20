@@ -51,7 +51,7 @@ const WorkSection=()=>{
         
             {
                 id:4,
-                name:'Examination Mangement System ',
+                name:'Examination Management System ',
                 path:require('../../Assets/projects/thumbnails/Examination-management.png'),
                 alt:'Examination Mangement System ',
                 description:'Built as a complete system to store and transport the examination files with the maximum security. Workflow with Examination controller, teachers and publishers. Teachers set exam and files for exams stored in distributed DMS called IPFS. Index keys for files then generated in IPFS stored in private blockchain called Hyperledger. Only viewable by Superintendent of examination 1 hour before examination as part of Smart Contract. One of the keys then accessible sent to publisher 1 hour before exam. Exam file accessible only on that day. Also AES encryption while sending files between the roles applied for extra security',
